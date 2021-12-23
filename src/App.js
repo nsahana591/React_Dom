@@ -1,23 +1,17 @@
-import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./founder/Navbar";
-import Login from "./founder/Login";
-import Digital from "./founder/Digital";
-import SMS from "./founder/SMS";
-function App() {
+import Message from "./Message/Message";
+import Navbar from "./Navbar/Navbar";
+let App = () => {
   return (
     <>
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/showpassword" element={<Login />} />
-          <Route path="/sms" element={<SMS />} />
-          <Route path="/digital" element={<Digital />} />
+          <Route path="/message" element={<Message />} />
+          <Route path="/Navbar" element={<Navbar/>}/>
         </Routes>
       </Router>
     </>
   );
-}
-
+};
 export default App;
-
